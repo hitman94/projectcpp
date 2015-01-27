@@ -1,3 +1,5 @@
+#ifndef CONSTANTE
+#define CONSTANTE
 #include <iostream>
 #include "Expression.h"
 class Constante :
@@ -5,10 +7,10 @@ class Constante :
 {
 public:
 	Constante(double value);
-	double eval();
-	friend ostream& operator<< (ostream &out, Constante &c);
+	virtual string const affiche();
+	virtual const double eval();
 	~Constante();
 private:
 	double value;
 };
-
+#endif

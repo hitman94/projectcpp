@@ -8,7 +8,16 @@ Expression::Expression()
 }
 
 ostream& operator<< (ostream &out, Expression &e) {
-	return out << "Salut";
+	return out << e.affiche().c_str();
+}
+
+void Expression::toutLiberer() {
+	set<Expression *>::iterator it;
+
+	for (it = Expression::_pool.begin(); it != Expression::_pool.end(); ) {
+		delete *it;
+		Expression::_pool.erase(it++);
+	}
 }
 
 

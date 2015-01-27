@@ -79,12 +79,18 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Constante.cpp" />
+    <ClCompile Include="Cos.cpp" />
+    <ClCompile Include="Exponentielle.cpp" />
     <ClCompile Include="Expression.cpp" />
+    <ClCompile Include="Sin.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Constante.h" />
+    <ClInclude Include="Cos.h" />
+    <ClInclude Include="Exponentielle.h" />
     <ClInclude Include="Expression.h" />
+    <ClInclude Include="Sin.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
