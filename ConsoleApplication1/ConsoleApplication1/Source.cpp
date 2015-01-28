@@ -4,8 +4,22 @@
 #include "Constante.h"
 #include "Sin.h"
 #include "Exponentielle.h"
+#include "Somme.h"
+#include "Produit.h"
+#include "SuperieurEgal.h"
 using namespace std;
 
+
+void testBinaires() {
+	Somme *s = new Somme(new Constante(1.0),
+		new Produit(new Constante(2.0),
+		new Sin(new Constante(3.14 / 6.0))
+		));
+	cout << *s << " = " << s->eval() << endl;
+	//SuperieurEgal comp(s, new Constante(1.8));
+	//cout << comp << " = " << (bool)comp.eval() << endl;
+	Expression::toutLiberer();
+}
 
 void testExp() {
 	Exponentielle *c = new Exponentielle(new Constante(3.14 / 3.0));
@@ -36,6 +50,6 @@ int main(int argc, char** argv) {
 	testCos();
 	testSin();
 	testExp();
-
+	testBinaires();
 	system("PAUSE");
 }

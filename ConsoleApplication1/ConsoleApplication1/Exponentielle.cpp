@@ -1,10 +1,7 @@
 #include "Exponentielle.h"
 #include <math.h>
 
-Exponentielle::Exponentielle(double value) :value(value)
-{
-}
-Exponentielle::Exponentielle(Constante *  c) : value(c->eval())
+Exponentielle::Exponentielle(Expression *  c) : expr(c)
 {
 }
 
@@ -13,9 +10,9 @@ Exponentielle::~Exponentielle()
 }
 
 const double Exponentielle::eval() {
-	return exp(this->value);
+	return exp(expr->eval());
 }
 
 string const Exponentielle::affiche() {
-	return "Exp(" + to_string(this->value) + ")";
+	return "Exp(" + expr->affiche() + ")";
 }

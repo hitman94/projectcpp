@@ -7,13 +7,13 @@ class Exponentielle :
 {
 public:
 	Exponentielle(double value);
-	Exponentielle(Constante * c);
+	Exponentielle(Expression * c);
 	virtual double const eval();
 	virtual string const affiche();
 	~Exponentielle();
 
 private:
-	double value;
+	Expression * expr;
 
 };
 #endif

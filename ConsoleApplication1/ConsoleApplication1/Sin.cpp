@@ -1,18 +1,15 @@
 #include "Sin.h"
 #include <math.h>
 
-Sin::Sin(double value) :value(value)
-{
-}
 
-Sin::Sin(Constante * c):value(c->eval()) {}
+Sin::Sin(Expression * c):expr(c) {}
 
 double const Sin::eval() {
-	return sin(this->value);
+	return sin(expr->eval());
 }
 
 string const Sin::affiche() {
-	return "Sin(" + std::to_string(this->value) + ")";
+	return "Sin(" + expr->affiche() + ")";
 }
 
 Sin::~Sin()

@@ -1,17 +1,15 @@
 #include "Cos.h"
 #include <math.h>
-Cos::Cos(double value) :value(value)
-{
-}
-Cos::Cos(Constante *  value) : value(value->eval())
+
+Cos::Cos(Expression *  value) : expr(value)
 {
 }
 double const Cos::eval() {
-	return cos(this->value);
+	return cos(expr->eval());
 }
 
 string const Cos::affiche() {
-	return "Cos(" + std::to_string(this->value) + ")";
+	return "Cos(" + expr->affiche() + ")";
 }
 
 Cos::~Cos()

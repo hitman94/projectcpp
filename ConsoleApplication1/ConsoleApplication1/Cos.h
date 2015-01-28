@@ -7,12 +7,11 @@ class Cos :
 	public Expression
 {
 public:
-	Cos(double value);
-	Cos(Constante * c);
+	Cos(Expression * c);
 	virtual const double eval();
 	virtual string const affiche();
 	~Cos();
 private:
-	double value;
+	Expression * expr;
 };
 #endif

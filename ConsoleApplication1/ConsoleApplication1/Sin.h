@@ -6,13 +6,12 @@ class Sin :
 	public Expression
 {
 public:
-	Sin(double value);
-	Sin(Constante * c);
+	Sin(Expression * c);
 	virtual const double eval();
 	virtual string const affiche();
 	~Sin();
 
 private:
-	double value;
+	Expression *  expr;
 };
 #endif

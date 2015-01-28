@@ -33,6 +33,27 @@
     <ClCompile Include="Exponentielle.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Somme.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Difference.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Produit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BinOp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Division.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="InferieurEgal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperieurEgal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Expression.h">
@@ -48,6 +69,27 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Exponentielle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Somme.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Difference.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Produit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BinOp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Division.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="InferieurEgal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SuperieurEgal.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
