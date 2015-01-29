@@ -54,6 +54,12 @@
     <ClCompile Include="SuperieurEgal.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Variable.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Affectation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Expression.h">
@@ -90,6 +96,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SuperieurEgal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Variable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Affectation.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

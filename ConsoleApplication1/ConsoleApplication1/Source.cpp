@@ -7,8 +7,24 @@
 #include "Somme.h"
 #include "Produit.h"
 #include "SuperieurEgal.h"
+#include "Variable.h"
+#include "Affectation.h"
 using namespace std;
 
+
+void testVariables() {
+	Variable x("x", 3.0);
+	Variable y("y");
+	cout << x << " = " << x.eval() << endl;
+	cout << y << " = " << y.eval() << endl;
+	Expression *exp = new Somme(new Constante(1.0),
+		new Produit(new Constante(2.0), new Variable("x")));
+	Affectation *a = new Affectation(new Variable("y"), exp);
+	cout << *a << " = " << a->eval() << endl;
+	cout << y << " = " << y.eval() << endl;
+	Variable::effacerMemoire();
+	cout << y << " = " << y.eval() << endl;
+}
 
 void testBinaires() {
 	Somme *s = new Somme(new Constante(1.0),
@@ -51,5 +67,8 @@ int main(int argc, char** argv) {
 	testSin();
 	testExp();
 	testBinaires();
+
+	testVariables();
+
 	system("PAUSE");
 }

@@ -78,6 +78,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Affectation.cpp" />
     <ClCompile Include="BinOp.cpp" />
     <ClCompile Include="Constante.cpp" />
     <ClCompile Include="Cos.cpp" />
@@ -91,8 +92,10 @@
     <ClCompile Include="Somme.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="SuperieurEgal.cpp" />
+    <ClCompile Include="Variable.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Affectation.h" />
     <ClInclude Include="BinOp.h" />
     <ClInclude Include="Constante.h" />
     <ClInclude Include="Cos.h" />
@@ -105,6 +108,7 @@
     <ClInclude Include="Sin.h" />
     <ClInclude Include="Somme.h" />
     <ClInclude Include="SuperieurEgal.h" />
+    <ClInclude Include="Variable.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

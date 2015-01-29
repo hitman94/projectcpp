@@ -1,0 +1,27 @@
+#include "Variable.h"
+
+map<string, double> Variable::varMap;
+
+Variable::Variable(string name, double value) :name(name)
+{
+	Variable::varMap.insert(std::pair<string,double>(name,value));
+}
+
+double const Variable::eval() {
+	if (Variable::varMap.find(this->name) == Variable::varMap.end())
+		varMap.insert(std::pair<string, double>(this->name, 0.0));
+	return Variable::varMap.find(this->name)->second;
+}
+
+string const Variable::affiche() {
+	return this->name;
+}
+
+void Variable::effacerMemoire() {
+	Variable::varMap.clear();
+}
+
+
+Variable::~Variable()
+{
+}
