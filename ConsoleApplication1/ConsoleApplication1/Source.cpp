@@ -6,8 +6,11 @@
 #include "Exponentielle.h"
 #include "Somme.h"
 #include "Produit.h"
+#include "Pour.h"
 #include "Conditionnel.h"
 #include "SuperieurEgal.h"
+#include "Superieur.h"
+#include "Inferieur.h"
 #include "Variable.h"
 #include "Affectation.h"
 using namespace std;
@@ -91,9 +94,34 @@ int main(int argc, char** argv) {
 	testCos();
 	testSin();
 	testExp();
-	testBinaires();*/
+	testBinaires();
 
 	testVariables(); 
-	//testConditionnel();
+	testConditionnel(); */
+
+	// x = 3
+	Variable * x = new Variable("x", 3.0);
+	cout << *x << " = " << x->eval() << endl;
+
+	// i = 0
+	Variable * i = new Variable("i");
+	cout << *i << " = " << i->eval() << endl;
+
+	// init = (i = 1)
+	Expression * init = new Affectation(i, new Constante(1));
+	// condition = (x > i - 1)
+	Expression * condition = new Superieur(x, new Somme(i, new Constante(-1)));
+	// actionFinDeBoucle = (i = i + 1)
+	Expression * actionFinDeBoucle = new Affectation(i, new Somme(i, new Constante(1)));
+	// calcul = (res = res * i)
+	Variable * res = new Variable("res", 1);
+	Expression * calcul(new Affectation(res, new Produit(res, i)));
+
+	// pour = for (i = 1; x > i; i = i + 1) res = res * i
+	Expression * pour = new Pour(init, condition, actionFinDeBoucle, calcul);
+	cout << *pour << "\n EVAL pour : " << pour->eval() << endl;
+	cout << x->eval() << "!" << " = " << res->eval() << endl;
+
+
 	system("PAUSE");
 }

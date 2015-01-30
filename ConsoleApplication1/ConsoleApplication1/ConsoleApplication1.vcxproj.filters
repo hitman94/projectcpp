@@ -69,6 +69,12 @@
     <ClCompile Include="Pour.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Superieur.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Inferieur.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Expression.h">
@@ -120,6 +126,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Pour.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Superieur.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Inferieur.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

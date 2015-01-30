@@ -11,7 +11,7 @@ double const Affectation::eval() {
 }
 
 string const Affectation::affiche() {
-	return this->var->affiche();
+	return this->var->affiche() +"=" + expr->affiche();
 }
 
 Affectation::~Affectation()

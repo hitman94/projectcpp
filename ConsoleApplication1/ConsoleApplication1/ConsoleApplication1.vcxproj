@@ -89,12 +89,14 @@
     <ClCompile Include="Exponentielle.cpp" />
     <ClCompile Include="Expression.cpp" />
     <ClCompile Include="IfThenElse.cpp" />
+    <ClCompile Include="Inferieur.cpp" />
     <ClCompile Include="InferieurEgal.cpp" />
     <ClCompile Include="Pour.cpp" />
     <ClCompile Include="Produit.cpp" />
     <ClCompile Include="Sin.cpp" />
     <ClCompile Include="Somme.cpp" />
     <ClCompile Include="Source.cpp" />
+    <ClCompile Include="Superieur.cpp" />
     <ClCompile Include="SuperieurEgal.cpp" />
     <ClCompile Include="Variable.cpp" />
   </ItemGroup>
@@ -109,14 +111,15 @@
     <ClInclude Include="Exponentielle.h" />
     <ClInclude Include="Expression.h" />
     <ClInclude Include="IfThenElse.h" />
+    <ClInclude Include="Inferieur.h" />
     <ClInclude Include="InferieurEgal.h" />
     <ClInclude Include="Pour.h" />
     <ClInclude Include="Produit.h" />
     <ClInclude Include="Sin.h" />
     <ClInclude Include="Somme.h" />
+    <ClInclude Include="Superieur.h" />
     <ClInclude Include="SuperieurEgal.h" />
     <ClInclude Include="Variable.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
-  
 </Project>
