@@ -94,6 +94,6 @@ int main(int argc, char** argv) {
 	testBinaires();
 
 	testVariables(); */
-	testConditionnel();
+	//testConditionnel();
 	system("PAUSE");
 }

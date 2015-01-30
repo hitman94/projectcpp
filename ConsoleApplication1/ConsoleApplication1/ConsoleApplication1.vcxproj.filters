@@ -63,6 +63,12 @@
     <ClCompile Include="Conditionnel.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="IfThenElse.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Pour.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Expression.h">
@@ -108,6 +114,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Conditionnel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IfThenElse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Pour.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

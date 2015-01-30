@@ -91,7 +91,9 @@
     <ClCompile Include="Division.cpp" />
     <ClCompile Include="Exponentielle.cpp" />
     <ClCompile Include="Expression.cpp" />
+    <ClCompile Include="IfThenElse.cpp" />
     <ClCompile Include="InferieurEgal.cpp" />
+    <ClCompile Include="Pour.cpp" />
     <ClCompile Include="Produit.cpp" />
     <ClCompile Include="Sin.cpp" />
     <ClCompile Include="Somme.cpp" />
@@ -109,7 +111,9 @@
     <ClInclude Include="Division.h" />
     <ClInclude Include="Exponentielle.h" />
     <ClInclude Include="Expression.h" />
+    <ClInclude Include="IfThenElse.h" />
     <ClInclude Include="InferieurEgal.h" />
+    <ClInclude Include="Pour.h" />
     <ClInclude Include="Produit.h" />
     <ClInclude Include="Sin.h" />
     <ClInclude Include="Somme.h" />
