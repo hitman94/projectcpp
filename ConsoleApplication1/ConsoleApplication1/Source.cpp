@@ -6,6 +6,7 @@
 #include "Exponentielle.h"
 #include "Somme.h"
 #include "Produit.h"
+#include "Conditionnel.h"
 #include "SuperieurEgal.h"
 #include "Variable.h"
 #include "Affectation.h"
@@ -61,14 +62,38 @@ void testConstante() {
 	Expression::toutLiberer();
 }
 
+
+void testConditionnel()
+{
+	// x = 0
+	Variable * x = new Variable("x", 8);
+
+	// expr = (x > 0) ? x + 10 : x * 10
+	Conditionnel * expr =
+		new Conditionnel(new SuperieurEgal(x, new Constante(0.0)),
+		new Somme(x, new Constante(10.0)),
+		new Produit(x, new Constante(10.0)));
+
+	cout << *x << " = " << x->eval() << endl;
+	cout << *expr << "\n EVAL ternaire : " << expr->eval() << endl;;
+	cout << *x << " = " << x->eval() << endl;
+	// x = expr OU ENCORE x = (x > 0) ? x + 10 : x * 10
+	//x->set(expr->eval());
+	cout << *x << " = " << x->eval() << endl;
+	cout << *expr << "\n EVAL ternaire : " << expr->eval() << endl;
+	cout << *x << " = " << x->eval() << endl;
+	Variable::effacerMemoire();
+}
+
+
 int main(int argc, char** argv) {
-	testConstante();
+/*	testConstante();
 	testCos();
 	testSin();
 	testExp();
 	testBinaires();
 
-	testVariables();
-
+	testVariables(); */
+	testConditionnel();
 	system("PAUSE");
 }

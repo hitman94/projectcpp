@@ -60,6 +60,9 @@
     <ClCompile Include="Affectation.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Conditionnel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Expression.h">
@@ -102,6 +105,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Affectation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Conditionnel.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
