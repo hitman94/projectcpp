@@ -13,6 +13,10 @@ double const Variable::eval() {
 	return Variable::varMap.find(this->name)->second;
 }
 
+void Variable::set(double value) {
+	Variable::varMap[this->name]= value;
+}
+
 string const Variable::affiche() {
 	return this->name;
 }

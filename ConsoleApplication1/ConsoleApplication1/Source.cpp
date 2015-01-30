@@ -91,9 +91,9 @@ int main(int argc, char** argv) {
 	testCos();
 	testSin();
 	testExp();
-	testBinaires();
+	testBinaires();*/
 
-	testVariables(); */
-	testConditionnel();
+	testVariables(); 
+	//testConditionnel();
 	system("PAUSE");
 }
