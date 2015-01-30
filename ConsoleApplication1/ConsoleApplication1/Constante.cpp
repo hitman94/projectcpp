@@ -3,14 +3,15 @@
 
 Constante::Constante(double value) :value(value)
 {
+	
 }
 
-double Constante::eval() {
+double const Constante::eval() {
 	return this->value;
 }
 
-ostream& operator<< (ostream &out, Constante &c) {
-	return out << c.value;
+string const Constante::affiche() {
+	return to_string(this->value);
 }
 
 Constante::~Constante()
