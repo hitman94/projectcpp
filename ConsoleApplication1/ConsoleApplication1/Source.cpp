@@ -1,5 +1,7 @@
 #include <iostream>
 #include "Constante.h"
+#include "parser.h"
+#include "lex.h"
 using namespace std;
 
 void testConstante() {
@@ -7,9 +9,9 @@ void testConstante() {
 	cout << c;
 }
 
+
 int main(int argc, char** argv) {
 	testConstante();
-
 	cout << "\n";
 	Expression * exp = *Expression::_pool.begin();
 	cout << *exp;
