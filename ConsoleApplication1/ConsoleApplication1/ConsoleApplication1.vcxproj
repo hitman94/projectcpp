@@ -81,6 +81,7 @@
   <ItemGroup>
     <ClCompile Include="Affectation.cpp" />
     <ClCompile Include="BinOp.cpp" />
+    <ClCompile Include="Bloc.cpp" />
     <ClCompile Include="Conditionnel.cpp" />
     <ClCompile Include="Constante.cpp" />
     <ClCompile Include="Cos.cpp" />
@@ -103,6 +104,7 @@
   <ItemGroup>
     <ClInclude Include="Affectation.h" />
     <ClInclude Include="BinOp.h" />
+    <ClInclude Include="Bloc.h" />
     <ClInclude Include="Conditionnel.h" />
     <ClInclude Include="Constante.h" />
     <ClInclude Include="Cos.h" />

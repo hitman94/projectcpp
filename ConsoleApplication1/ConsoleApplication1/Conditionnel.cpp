@@ -12,7 +12,7 @@ Conditionnel::~Conditionnel()
 
 
 double const Conditionnel::eval() {
-	if ((bool)condition->eval){
+	if ((bool)condition->eval()){
 		return expr1->eval();
 	}else{
 		return expr2->eval();

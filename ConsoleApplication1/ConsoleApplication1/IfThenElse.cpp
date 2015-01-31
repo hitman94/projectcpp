@@ -12,7 +12,7 @@ IfThenElse::~IfThenElse()
 
 
 double const IfThenElse::eval() {
-	if ((bool)condition->eval){
+	if ((bool)condition->eval()){
 		return expr1->eval();
 	}
 	else{
@@ -21,5 +21,5 @@ double const IfThenElse::eval() {
 }
 
 string const IfThenElse::affiche() {
-	return "if(" + condition->affiche() + ")" + expr1->affiche() + "else" + expr2->affiche();
+	return "if( " + condition->affiche() + " )" + expr1->affiche() + "else " + expr2->affiche();
 }

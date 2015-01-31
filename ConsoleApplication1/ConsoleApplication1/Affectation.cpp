@@ -6,8 +6,9 @@ Affectation::Affectation(Variable * v, Expression * expr) :var(v), expr(expr)
 }
 
 double const Affectation::eval() {
-	var->set(this->expr->eval());
-	return this->expr->eval();
+	double value = this->expr->eval();
+	var->set(value);
+	return value;
 }
 
 string const Affectation::affiche() {
