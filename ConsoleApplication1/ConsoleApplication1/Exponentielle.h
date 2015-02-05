@@ -10,6 +10,7 @@ public:
 	Exponentielle(Expression * c);
 	virtual double const eval();
 	virtual string const affiche();
+	virtual Expression * derive(string var);
 	~Exponentielle();
 
 private:

@@ -20,6 +20,9 @@ void Expression::toutLiberer() {
 	}
 }
 
+Expression * Expression::derive(string var) {
+	return this;
+}
 
 Expression::~Expression()
 {

@@ -1,5 +1,5 @@
 #include "Variable.h"
-
+#include "Constante.h"
 map<string, double> Variable::varMap;
 
 Variable::Variable(string name, double value) :name(name)
@@ -19,6 +19,13 @@ void Variable::set(double value) {
 
 string const Variable::affiche() {
 	return this->name;
+}
+
+
+Expression * Variable::derive(string var) {
+	if (var == this->name)
+		return new Constante(1);
+	return new Constante(0);
 }
 
 void Variable::effacerMemoire() {

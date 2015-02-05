@@ -9,6 +9,7 @@ class Cos :
 public:
 	Cos(Expression * c);
 	virtual const double eval();
+	virtual Expression * derive(string var);
 	virtual string const affiche();
 	~Cos();
 private:

@@ -14,6 +14,9 @@ string const Constante::affiche() {
 	return to_string(this->value);
 }
 
+Expression * Constante::derive(string var) {
+	return new Constante(0);
+}
 Constante::~Constante()
 {
 }
