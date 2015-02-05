@@ -18,6 +18,17 @@
 using namespace std;
 
 
+
+void testDerivation() {
+	Expression * var = new Variable("x");
+	Expression * c = new Cos(var);
+
+	cout << *c << "' = " << *(c->derive("x")) << "\n";
+	Expression * exp1 = new Produit(new Exponentielle(var), new Sin(new Variable("y")));
+
+	cout << *exp1 << "' = " << *(exp1->derive("x")) << "\n";
+
+}
 void testVariables() {
 	Variable x("x", 3.0);
 	Variable y("y");
@@ -370,10 +381,8 @@ int main(int argc, char** argv) {
 	testPour2();
 	
 	*/
+	testPour3();
 
-
-	testConstante();
-
-
+	verifBoucle3();
 	system("PAUSE");
 }
