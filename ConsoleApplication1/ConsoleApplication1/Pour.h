@@ -1,4 +1,5 @@
-
+#ifndef POUR_H
+#define POUR_H
 #include "Expression.h"
 class Pour :
 	public Expression
@@ -19,3 +20,4 @@ private:
 	Expression * calcul;
 };
 
+#endif

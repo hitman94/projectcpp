@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Affectation" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAYAAAgAACAAAAAAAAAAAAAAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>Affectation.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BinOp" Collapsed="true">
+    <Position X="10.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAAAAAAAAAAAIAAAABAAEAAAACA=</HashCode>
+      <FileName>BinOp.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bloc" Collapsed="true">
+    <Position X="13" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAgAQAAAAAAAAAAAAAAAAAAAAAEAAAAABAAAAACAAE=</HashCode>
+      <FileName>Bloc.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Conditionnel" Collapsed="true">
+    <Position X="15.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAZAAAAAAAAAAAAAEAAAAAAAAQAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Conditionnel.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Constante" Collapsed="true">
+    <Position X="22" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAQAAAAAAAAAAAAAAAAAAAAAAACgAAAAAAAAAAAA=</HashCode>
+      <FileName>Constante.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Cos" Collapsed="true">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAQAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAgAAAQ=</HashCode>
+      <FileName>Cos.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Difference" Collapsed="true">
+    <Position X="2.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAAAAAQAAAIAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Difference.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Division" Collapsed="true">
+    <Position X="9.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAAAAAABAAIAACAAAAAAAAAAA=</HashCode>
+      <FileName>Division.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Exponentielle" Collapsed="true">
+    <Position X="17.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAQAAAQAAAAAAAAAAAAABAAAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>Exponentielle.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Expression" Collapsed="true">
+    <Position X="10.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAQAABEAAAAAAAAAAAAAAAAAAAAAQAAAAAAACAAA=</HashCode>
+      <FileName>Expression.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IfThenElse" Collapsed="true">
+    <Position X="5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAYAAAABAAEAAAAAAAAAAAAAAQAAAAAAAIAAAAAA=</HashCode>
+      <FileName>IfThenElse.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Inferieur" Collapsed="true">
+    <Position X="5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEgAAAAAAAAAAAABAAAAAAAAAAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Inferieur.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InferieurEgal" Collapsed="true">
+    <Position X="11.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAgAAAAAAAAAAAAAAAAEAAAAAAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>InferieurEgal.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pour" Collapsed="true">
+    <Position X="19.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAYAAAASAAAAAAAAAAACAAAIAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Pour.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Produit" Collapsed="true">
+    <Position X="18.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAiAAAAAAAAAAAAAAQAAAAAAAAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Produit.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sin" Collapsed="true">
+    <Position X="7.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAQAAAAAAAAAACAAEAAAAAAAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>Sin.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Somme" Collapsed="true">
+    <Position X="7.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAAAAAAABAIAAgAAAAAAAAAAA=</HashCode>
+      <FileName>Somme.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Superieur" Collapsed="true">
+    <Position X="14" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAABAAAAAAAAAAAAAIAAAAAAAAAACAAA=</HashCode>
+      <FileName>Superieur.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SuperieurEgal" Collapsed="true">
+    <Position X="16.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAgAACAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SuperieurEgal.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Variable" Collapsed="true">
+    <Position X="24.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACiAQAAAACAAAAAAAAAAAAAAAAEAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Variable.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

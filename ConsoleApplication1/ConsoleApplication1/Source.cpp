@@ -370,8 +370,10 @@ int main(int argc, char** argv) {
 	testPour2();
 	
 	*/
-	testPour3();
 
-	verifBoucle3();
+
+	testConstante();
+
+
 	system("PAUSE");
 }
