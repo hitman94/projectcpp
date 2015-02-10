@@ -21,3 +21,8 @@ Expression * Exponentielle::derive(string var) {
 string const Exponentielle::affiche() {
 	return "Exp(" + expr->affiche() + ")";
 }
+
+Expression * Exponentielle::simplifier(){
+	expr->simplifier();
+	return this;
+}

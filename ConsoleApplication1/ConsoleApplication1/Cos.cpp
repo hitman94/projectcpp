@@ -21,3 +21,8 @@ Expression * Cos::derive(string var) {
 Cos::~Cos()
 {
 }
+
+Expression * Cos::simplifier(){
+	expr->simplifier();
+	return this;
+}

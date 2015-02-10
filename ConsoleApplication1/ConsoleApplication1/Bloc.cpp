@@ -31,5 +31,4 @@ string const Bloc::affiche() {
 		returnString += "\t" + (*it)->affiche() + "\n";
 	}
 	return (returnString += "}");
-
 }

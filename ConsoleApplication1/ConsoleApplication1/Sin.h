@@ -9,6 +9,7 @@ public:
 	Sin(Expression * c);
 	virtual const double eval();
 	virtual string const affiche();
+	virtual Expression * simplifier();
 	virtual Expression * derive(string var);
 	~Sin();
 

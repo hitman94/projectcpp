@@ -9,6 +9,7 @@ public:
 	~Conditionnel();
 	virtual double const eval();
 	virtual string const affiche();
+	virtual Expression * simplifier();
 
 private:
 	Expression * condition;

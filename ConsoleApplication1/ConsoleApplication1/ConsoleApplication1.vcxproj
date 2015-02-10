@@ -117,14 +117,19 @@
     <ClInclude Include="InferieurEgal.h" />
     <ClInclude Include="Pour.h" />
     <ClInclude Include="Produit.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="Sin.h" />
     <ClInclude Include="Somme.h" />
     <ClInclude Include="Superieur.h" />
     <ClInclude Include="SuperieurEgal.h" />
+    <ClInclude Include="TypeEnum.h" />
     <ClInclude Include="Variable.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ConsoleApplication1.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
 </Project>

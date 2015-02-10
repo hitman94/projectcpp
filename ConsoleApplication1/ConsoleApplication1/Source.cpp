@@ -10,6 +10,7 @@
 #include "Conditionnel.h"
 #include "SuperieurEgal.h"
 #include "IfThenElse.h"
+#include "Difference.h"
 #include "Superieur.h"
 #include "Inferieur.h"
 #include "Variable.h"
@@ -379,10 +380,16 @@ int main(int argc, char** argv) {
 	testBloc();
 	testPour1();
 	testPour2();
-	
-	*/
 	testPour3();
-
 	verifBoucle3();
+	*/
+
+
+	Expression * exp = new Difference(new Constante(0.0), new Constante(5.0));
+	exp = exp->simplifier();
+
+	cout << *exp << " = " << exp->eval() << endl;
+
+
 	system("PAUSE");
 }

@@ -1,6 +1,6 @@
 #include "Difference.h"
 
-
+#include "Constante.h"
 Difference::Difference(Expression *e1, Expression * e2) :BinOp(e1,e2) {
 
 }
@@ -15,6 +15,24 @@ Expression * Difference::derive(string var) {
 
 string Difference::whoAmI() {
 	return "-";
+}
+
+Expression * Difference::simplifier(){
+	this->simplifierOperande();
+	
+	// Si e2 et e1 sont des exprs
+	//	if (((e1->getType() != Type::variable) || (e1->getType() != Type::constant)) && ((e2->getType() != Type::variable) || (e2->getType() != Type::constant))){
+	//	return this;
+	//}
+	// SI e1 et e2 sont des variable
+	if (e1->getType() == Type::variable && e2->getType() == Type::variable){
+		 if (e1 == e2)
+			return new Constante(0.0);
+	}
+	else if (e2->getType() == Type::constant && e2->eval() == 0){
+		return e1;
+	}
+	return this;
 }
 
 Difference::~Difference()

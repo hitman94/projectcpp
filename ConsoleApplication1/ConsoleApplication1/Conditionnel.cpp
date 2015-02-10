@@ -22,3 +22,10 @@ double const Conditionnel::eval() {
 string const Conditionnel::affiche() {
 	return "(" + condition->affiche() + ")?" + expr1->affiche() + ":" + expr2->affiche();
 }
+
+Expression * Conditionnel::simplifier(){
+	condition = condition->simplifier();
+	expr1 = expr1->simplifier();
+	expr2 = expr2->simplifier();
+	return this;
+}

@@ -20,3 +20,8 @@ Expression * Constante::derive(string var) {
 Constante::~Constante()
 {
 }
+
+
+Type Constante::getType(){
+	return Type::constant;
+}

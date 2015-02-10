@@ -20,3 +20,8 @@ Expression * Sin::derive(string var) {
 Sin::~Sin()
 {
 }
+
+Expression * Sin::simplifier(){
+	expr->simplifier();
+	return this;
+}

@@ -7,6 +7,7 @@ class Difference :
 public:
 	Difference(Expression *e1, Expression *e2);
 	virtual double const eval();
+	virtual Expression * simplifier();
 	virtual Expression * derive(string var);
 	~Difference();
 private:
