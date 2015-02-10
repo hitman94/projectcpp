@@ -9,6 +9,7 @@ public:
 	virtual double const eval();
 	virtual Expression * simplifier();
 	virtual Expression * derive(string var);
+	virtual Expression * const clone();
 	~Difference();
 private:
 	virtual string whoAmI();

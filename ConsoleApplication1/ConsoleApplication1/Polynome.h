@@ -10,6 +10,7 @@ public:
 	Polynome(set<std::pair<double,double>> set, Variable * nomVar);
 	virtual double const eval();
 	virtual string const affiche();
+	virtual Expression * const clone();
 	virtual Expression * derive(string var);
 	~Polynome();
 

@@ -15,11 +15,9 @@ string const Affectation::affiche() {
 	return this->var->affiche() +"=" + expr->affiche();
 }
 
-Expression * Affectation::simplifier(){
-	expr = expr->simplifier();
-	return this;
+Expression * const Affectation::clone() {
+	return new Affectation(var, expr->clone());
 }
-
 Affectation::~Affectation()
 {
 }

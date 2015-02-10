@@ -9,7 +9,7 @@ public:
 	Affectation(Variable * v, Expression * expr);
 	double const eval();
 	string const affiche();
-	virtual Expression * simplifier();
+	virtual Expression * const clone();
 	~Affectation();
 private:
 	Variable * var;

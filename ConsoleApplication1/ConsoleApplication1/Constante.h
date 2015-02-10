@@ -11,6 +11,7 @@ public:
 	virtual const double eval();
 	virtual Type getType();
 	virtual Expression * derive(string var);
+	virtual Expression * const clone();
 	~Constante();
 private:
 	double value;

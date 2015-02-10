@@ -10,6 +10,7 @@ public:
 	virtual const double eval();
 	virtual string const affiche();
 	virtual Expression * simplifier();
+	virtual Expression * const clone();
 	virtual Expression * derive(string var);
 	~Sin();
 

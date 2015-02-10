@@ -35,12 +35,6 @@ Type Variable::getType(){
 	return Type::variable;
 }
 
-bool Variable::operator==(Variable const &var){
-	if (this->name == var.name){
-		return true;
-	}
-	return false;
-}
 
 Variable::~Variable()
 {

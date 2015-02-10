@@ -17,6 +17,9 @@ string const Constante::affiche() {
 Expression * Constante::derive(string var) {
 	return new Constante(0);
 }
+Expression * const Constante::clone() {
+	return new Constante(value);
+}
 Constante::~Constante()
 {
 }

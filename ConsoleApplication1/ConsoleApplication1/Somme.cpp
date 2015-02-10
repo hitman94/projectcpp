@@ -17,6 +17,10 @@ string Somme::whoAmI() {
 	return "+";
 }
 
+Expression * const Somme::clone() {
+	return new Somme(e1->clone(), e2->clone());
+}
+
 Somme::~Somme()
 {
 }

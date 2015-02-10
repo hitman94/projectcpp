@@ -17,6 +17,10 @@ string const Sin::affiche() {
 Expression * Sin::derive(string var) {
 	return new Produit(expr->derive(var), new Cos(expr));
 }
+
+Expression * const Sin::clone() {
+	return new Sin(expr->clone());
+}
 Sin::~Sin()
 {
 }

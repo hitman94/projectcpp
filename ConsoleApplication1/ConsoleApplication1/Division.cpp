@@ -18,6 +18,9 @@ Expression * Division::derive(string var) {
 string Division::whoAmI() {
 	return "/";
 }
+Expression * const Division::clone() {
+	return new Division(e1->clone(), e2->clone());
+}
 
 Division::~Division()
 {
