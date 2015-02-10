@@ -20,11 +20,7 @@ string Difference::whoAmI() {
 Expression * Difference::simplifier(){
 	this->simplifierOperande();
 	
-	// Si e2 et e1 sont des exprs
-	//	if (((e1->getType() != Type::variable) || (e1->getType() != Type::constant)) && ((e2->getType() != Type::variable) || (e2->getType() != Type::constant))){
-	//	return this;
-	//}
-	// SI e1 et e2 sont des variable
+
 	if (e1->getType() == Type::variable && e2->getType() == Type::variable){
 		 if (e1 == e2)
 			return new Constante(0.0);

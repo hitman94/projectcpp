@@ -8,6 +8,7 @@ public:
 	Produit(Expression * e1, Expression *e2);
 	virtual double const eval();
 	virtual Expression * derive(string var);
+	virtual Expression * simplifier();
 	~Produit();
 protected:
 	virtual string whoAmI();
