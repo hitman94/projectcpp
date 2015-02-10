@@ -4,7 +4,7 @@
 #include <math.h>
 
 
-Sin::Sin(Expression * c):expr(c) {}
+Sin::Sin(Expression * c):UnaireOp(c) {}
 
 double const Sin::eval() {
 	return sin(expr->eval());

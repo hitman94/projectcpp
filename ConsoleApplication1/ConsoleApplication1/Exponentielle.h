@@ -1,9 +1,9 @@
 #ifndef EXPONENTIELLE
 #define EXPONENTIELLE
-#include "Expression.h"
+#include "UnaireOp.h"
 #include "Constante.h"
 class Exponentielle :
-	public Expression
+	public UnaireOp
 {
 public:
 	Exponentielle(double value);
@@ -14,9 +14,6 @@ public:
 	virtual Expression * simplifier();
 	virtual Expression * const clone();
 	~Exponentielle();
-
-private:
-	Expression * expr;
 
 };
 #endif

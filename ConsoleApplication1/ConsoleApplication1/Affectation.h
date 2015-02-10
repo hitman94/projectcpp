@@ -10,7 +10,6 @@ public:
 	double const eval();
 	string const affiche();
 	virtual Expression * const clone();
-	virtual Expression * simplifier();
 	~Affectation();
 private:
 	Variable * var;

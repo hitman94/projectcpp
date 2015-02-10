@@ -7,7 +7,6 @@ class BinOp :
 public:
 	BinOp(Expression *e1, Expression *e2);
 	virtual string const affiche();
-	virtual Expression * const clone();
 	~BinOp();
 
 protected:

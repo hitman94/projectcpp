@@ -55,16 +55,18 @@ void testVariable1()
 	cout << x << " = " << x.eval() << endl;
 	cout << y << " = " << y.eval() << endl;
 
-	// exp = 1 + 2 * x
-	Expression * exp = new Somme(new Constante(1.0), new Produit(new Constante(2.0), &x));
-	// a = (y <- exp)
-	Affectation * a = new Affectation(new Variable("y"), exp->clone());
-	cout << *a << " = " << a->eval() << endl;
-	cout << y << " = " << y.eval() << endl;
 
+	//IL FAUT FAIRE UN NEW POUR LE X
+	// exp = 1 + 2 * x
+	//Expression * exp = new Somme(new Constante(1.0), new Produit(new Constante(2.0), &x));
+	// a = (y <- exp)
+	//Affectation * a = new Affectation(new Variable("y"), exp->clone());
+	//cout << *a << " = " << a->eval() << endl;
+	cout << y << " = " << y.eval() << endl;
+	
 	Variable::effacerMemoire();
-	delete exp; // OK car il existe un clone
-	delete a;
+	//delete exp; // OK car il existe un clone
+	//delete a;
 	cout << "destruction automatique des variables locales allouees sur la PILE: ICI X et Y" << endl;
 }
 
@@ -489,6 +491,7 @@ int main(int argc, char** argv) {
 			cout << "cas inconnu!" << endl;
 			break;
 		}
+		cout << "\npool size:" << Expression::_pool.size() << "\n";
 	} while (choix != 666);
 
 	Expression::toutLiberer();

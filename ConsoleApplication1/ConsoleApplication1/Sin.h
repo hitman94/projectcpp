@@ -1,9 +1,9 @@
 #ifndef SIN
 #define SIN
 #include "Constante.h"
-
+#include "UnaireOp.h"
 class Sin :
-	public Expression
+	public UnaireOp
 {
 public:
 	Sin(Expression * c);
@@ -14,7 +14,5 @@ public:
 	virtual Expression * derive(string var);
 	~Sin();
 
-private:
-	Expression *  expr;
 };
 #endif

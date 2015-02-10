@@ -3,7 +3,7 @@
 #include "Sin.h"
 #include <math.h>
 
-Cos::Cos(Expression *  value) : expr(value)
+Cos::Cos(Expression *  value) : UnaireOp(value)
 {
 }
 double const Cos::eval() {
