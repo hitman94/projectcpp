@@ -92,6 +92,7 @@
     <ClCompile Include="IfThenElse.cpp" />
     <ClCompile Include="Inferieur.cpp" />
     <ClCompile Include="InferieurEgal.cpp" />
+    <ClCompile Include="Polynome.cpp" />
     <ClCompile Include="Pour.cpp" />
     <ClCompile Include="Produit.cpp" />
     <ClCompile Include="Sin.cpp" />
@@ -115,6 +116,7 @@
     <ClInclude Include="IfThenElse.h" />
     <ClInclude Include="Inferieur.h" />
     <ClInclude Include="InferieurEgal.h" />
+    <ClInclude Include="Polynome.h" />
     <ClInclude Include="Pour.h" />
     <ClInclude Include="Produit.h" />
     <ClInclude Include="resource.h" />
