@@ -15,6 +15,7 @@
 #include "Variable.h"
 #include "Affectation.h"
 #include "Bloc.h"
+#include "Polynome.h"
 using namespace std;
 
 
@@ -29,20 +30,55 @@ void testDerivation() {
 	cout << *exp1 << "' = " << *(exp1->derive("x")) << "\n";
 
 }
-void testVariables() {
+
+void testPolynome() {
+	std::set<std::pair<double, double>> set;
+	set.insert(std::pair<double, double>(0, 0));
+	set.insert(std::pair<double, double>(1, 1));
+	set.insert(std::pair<double, double>(2, 4));
+	Variable * var = new Variable("x",3);
+	Expression * poly = new Polynome(set, var);
+
+	cout << *poly << "\n";
+	cout << "valeur pour x =" << var->eval() << " : " << poly->eval()<< "\n";
+
+	cout << "polynome derive:" <<  *poly->derive("x") << "\n";
+
+}
+
+void testVariable1()
+{
+	// x = 3
 	Variable x("x", 3.0);
+	// y = 0
 	Variable y("y");
 	cout << x << " = " << x.eval() << endl;
 	cout << y << " = " << y.eval() << endl;
-	Expression *exp = new Somme(new Constante(1.0),
-		new Produit(new Constante(2.0), new Variable("x")));
-	Affectation *a = new Affectation(new Variable("y"), exp);
-	cout << *a << " = " << a->eval() << endl;
+
+	// exp = 1 + 2 * x
+	Expression * exp = new Somme(new Constante(1.0), new Produit(new Constante(2.0), &x));
+	// a = (y <- exp)
+	//Affectation * a = new Affectation(new Variable("y"), exp->clone());
+	//cout << *a << " = " << a->eval() << endl;
 	cout << y << " = " << y.eval() << endl;
+
 	Variable::effacerMemoire();
-	cout << y << " = " << y.eval() << endl;
+	delete exp; // OK car il existe un clone
+	//delete a;
+	cout << "destruction automatique des variables locales allouees sur la PILE: ICI X et Y" << endl;
 }
 
+void testVariable2()
+{
+	// x = PI/3
+	Variable * x = new Variable("x", 3.14 / 3.0);
+	cout << *x << " = " << x->eval() << endl;
+	// x = x + (-10)
+	x->set(x->eval() + -10);
+	cout << *x << " = " << x->eval() << endl;
+
+	Variable::effacerMemoire();
+}
 void testBinaires() {
 	Somme *s = new Somme(new Constante(1.0),
 		new Produit(new Constante(2.0),
@@ -368,21 +404,94 @@ void verifBoucle3()
 
 
 int main(int argc, char** argv) {
-/*	testConstante();
-	testCos();
-	testSin();
-	testExp();
-	testBinaires();
-	testVariables(); 
-	testConditionnel(); 
-	testIfThenElse();
-	testBloc();
-	testPour1();
-	testPour2();
-	
-	*/
-	testPour3();
+	int choix = -1;
 
-	verifBoucle3();
+
+
+	do
+	{
+		cout << " 0 : constante" << endl;
+		cout << " 1 : cosinus" << endl;
+		cout << " 2 : binaire" << endl;
+		cout << " 3 : variable1" << endl;
+		cout << " 4 : variable2" << endl;
+		cout << " 5 : conditionnel" << endl;
+		cout << " 6 : if then else" << endl;
+		cout << " 7 : bloc" << endl;
+		cout << " 8 : boucle avec une seule expression" << endl;
+		cout << " 9 : boucle avec bloc d'expressions" << endl;
+		cout << " 10 : boucles imbriques" << endl;
+		cout << " 11 : tous les tests" << endl;
+		cout << " 12 : polynomes" << endl;
+		cout << " 666 : quitter" << endl;
+		cout << "choix : ";
+		cin >> choix;
+		switch (choix)
+		{
+		case 0:
+			testConstante();
+			break;
+		case 1:
+			testCos();
+			break;
+		case 2:
+			testBinaires();
+			break;
+		case 3:
+			testVariable1();
+			break;
+		case 4:
+			testVariable2();
+			break;
+		case 5:
+			testConditionnel();
+			break;
+		case 6:
+			testIfThenElse();
+			break;
+		case 7:
+			testBloc();
+			break;
+		case 8:
+			testPour1();
+			break;
+		case 9:
+			testPour2();
+			cout << "VERIFICATION" << endl;
+			verifBoucle2();
+			break;
+		case 10:
+			testPour3();
+			cout << "VERIFICATION" << endl;
+			verifBoucle3();
+			break;
+		case 11:
+			testConstante();
+			testCos();
+			testBinaires();
+			testVariable1();
+			testVariable2();
+			testConditionnel();
+			testIfThenElse();
+			testBloc();
+			testPour1();
+			testPour2();
+			cout << "VERIFICATION" << endl;
+			verifBoucle2();
+			testPour3();
+			cout << "VERIFICATION" << endl;
+			verifBoucle3();
+			break;
+		case 12:
+			testPolynome();
+			break;
+		default:
+			cout << "cas inconnu!" << endl;
+			break;
+		}
+	} while (choix != 666);
+
+	Expression::toutLiberer();
+	return 0;
 	system("PAUSE");
 }
