@@ -58,6 +58,10 @@ double const Polynome::eval() {
 	return result;
 }
 
+Expression * const Polynome::clone() {
+	return new Polynome(std::set<std::pair<double, double>>(coeff),variable ) ;
+}
+
 Polynome::~Polynome()
 {
 }

@@ -32,7 +32,6 @@ void Variable::effacerMemoire() {
 	Variable::varMap.clear();
 }
 
-
 Variable::~Variable()
 {
 }

@@ -58,13 +58,13 @@ void testVariable1()
 	// exp = 1 + 2 * x
 	Expression * exp = new Somme(new Constante(1.0), new Produit(new Constante(2.0), &x));
 	// a = (y <- exp)
-	//Affectation * a = new Affectation(new Variable("y"), exp->clone());
-	//cout << *a << " = " << a->eval() << endl;
+	Affectation * a = new Affectation(new Variable("y"), exp->clone());
+	cout << *a << " = " << a->eval() << endl;
 	cout << y << " = " << y.eval() << endl;
 
 	Variable::effacerMemoire();
 	delete exp; // OK car il existe un clone
-	//delete a;
+	delete a;
 	cout << "destruction automatique des variables locales allouees sur la PILE: ICI X et Y" << endl;
 }
 

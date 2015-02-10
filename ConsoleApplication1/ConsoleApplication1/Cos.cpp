@@ -18,6 +18,9 @@ Expression * Cos::derive(string var) {
 	return new Produit(new Constante(-1),new Produit(expr->derive(var), new Sin(expr)));
 }
 
+Expression * const Cos::clone() {
+	return new Cos(expr->clone());
+}
 Cos::~Cos()
 {
 }

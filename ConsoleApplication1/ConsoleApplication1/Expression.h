@@ -11,6 +11,7 @@ public:
 
 	virtual const double eval()=0;
 	virtual string const affiche() = 0;
+	virtual Expression * const clone();
 	virtual Expression * derive(string var);
 	static void toutLiberer();
 	virtual ~Expression();

@@ -20,6 +20,10 @@ void Expression::toutLiberer() {
 	}
 }
 
+Expression * const Expression::clone() {
+	return this;
+}
+
 Expression * Expression::derive(string var) {
 	return this;
 }

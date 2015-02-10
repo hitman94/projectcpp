@@ -13,7 +13,9 @@ Expression * Produit::derive(string var) {
 string Produit::whoAmI() {
 	return "*";
 }
-
+Expression * const Produit::clone() {
+	return new Produit(e1->clone(), e2->clone());
+}
 Produit::~Produit()
 {
 }

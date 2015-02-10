@@ -16,6 +16,9 @@ Expression * Difference::derive(string var) {
 string Difference::whoAmI() {
 	return "-";
 }
+Expression * const Difference::clone() {
+	return new Difference(e1->clone(), e2->clone());
+}
 
 Difference::~Difference()
 {
