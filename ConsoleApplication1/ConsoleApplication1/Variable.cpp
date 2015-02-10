@@ -31,6 +31,10 @@ Expression * Variable::derive(string var) {
 void Variable::effacerMemoire() {
 	Variable::varMap.clear();
 }
+Type Variable::getType(){
+	return Type::variable;
+}
+
 
 Variable::~Variable()
 {

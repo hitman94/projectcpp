@@ -23,3 +23,8 @@ Expression * const Constante::clone() {
 Constante::~Constante()
 {
 }
+
+
+Type Constante::getType(){
+	return Type::constant;
+}

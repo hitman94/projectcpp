@@ -10,3 +10,8 @@ string const BinOp::affiche() {
 BinOp::~BinOp()
 {
 }
+
+void BinOp::simplifierOperande(){
+	e1 = e1->simplifier();
+	e2 = e2->simplifier();
+}

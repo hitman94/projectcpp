@@ -11,7 +11,7 @@ public:
 	virtual const double eval();
 	virtual Expression * derive(string var);
 	virtual string const affiche();
-	virtual Expression * const clone();
+	virtual Expression * simplifier();
 	~Cos();
 private:
 	Expression * expr;

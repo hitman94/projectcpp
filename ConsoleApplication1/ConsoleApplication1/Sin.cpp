@@ -24,3 +24,8 @@ Expression * const Sin::clone() {
 Sin::~Sin()
 {
 }
+
+Expression * Sin::simplifier(){
+	expr->simplifier();
+	return this;
+}

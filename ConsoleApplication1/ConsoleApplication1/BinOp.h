@@ -13,6 +13,9 @@ protected:
 	virtual string whoAmI()=0;
 	Expression *e1;
 	Expression *e2;
+	void simplifierOperande();
+
+	
 };
 
 

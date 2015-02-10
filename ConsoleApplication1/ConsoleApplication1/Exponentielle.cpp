@@ -25,3 +25,8 @@ Expression * const Exponentielle::clone() {
 string const Exponentielle::affiche() {
 	return "Exp(" + expr->affiche() + ")";
 }
+
+Expression * Exponentielle::simplifier(){
+	expr->simplifier();
+	return this;
+}

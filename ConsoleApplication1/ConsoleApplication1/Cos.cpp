@@ -24,3 +24,8 @@ Expression * const Cos::clone() {
 Cos::~Cos()
 {
 }
+
+Expression * Cos::simplifier(){
+	expr->simplifier();
+	return this;
+}

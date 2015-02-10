@@ -23,3 +23,10 @@ double const IfThenElse::eval() {
 string const IfThenElse::affiche() {
 	return "if( " + condition->affiche() + " )" + expr1->affiche() + "else " + expr2->affiche();
 }
+
+Expression * IfThenElse::simplifier(){
+	condition = condition->simplifier();
+	expr1 = expr1->simplifier();
+	expr2 = expr2->simplifier();
+	return this;
+}
