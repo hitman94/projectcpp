@@ -12,6 +12,7 @@ public:
 	virtual string const affiche();
 	virtual Expression * derive(string var);
 	virtual Expression * simplifier();
+	virtual Expression * const clone();
 	~Exponentielle();
 
 private:
