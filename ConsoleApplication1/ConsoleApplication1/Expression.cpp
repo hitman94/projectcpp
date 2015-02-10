@@ -12,10 +12,11 @@ ostream& operator<< (ostream &out, Expression &e) {
 }
 
 void Expression::toutLiberer() {
-	set<Expression *>::iterator it;
-
-	for (it = Expression::_pool.begin(); it != Expression::_pool.end(); it++) {
-		delete *it;
+	std::set<Expression *>::iterator it = Expression::_pool.begin();
+	while (it != Expression::_pool.end()) {
+		Expression * suppression = *it;
+		it++;
+		delete suppression;
 	}
 }
 

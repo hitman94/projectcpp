@@ -17,6 +17,10 @@ string Somme::whoAmI() {
 	return "+";
 }
 
+Expression * Somme::simplifier() {
+	return this;
+}
+
 Expression * const Somme::clone() {
 	return new Somme(e1->clone(), e2->clone());
 }

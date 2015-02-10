@@ -62,6 +62,36 @@ Expression * const Polynome::clone() {
 	return new Polynome(std::set<std::pair<double, double>>(coeff),variable ) ;
 }
 
+Polynome * const Polynome::operator+(const Polynome &polynom) {
+	std::set<std::pair<double, double>> set;
+	std::set<std::pair<double, double>>::iterator it1 = coeff.begin();
+	std::set<std::pair<double, double>>::iterator it2 = polynom.coeff.begin();
+	while (it1 != coeff.end() && it2 != polynom.coeff.end()) {
+		if (it1->first < it2->first) {
+			set.insert(*it1);
+			it1++;
+		}
+		else if (it1->first > it2->first) {
+			set.insert(*it2);
+			it2++;
+		}
+		else {
+			set.insert(std::pair<double, double>(it1->first, it1->second + it2->second));
+			it1++;
+			it2++;
+		}
+	}
+	while (it1 != coeff.end()) {
+		set.insert(*it1);
+		it1++;
+	}
+	while (it2 != polynom.coeff.end()) {
+		set.insert(*it2);
+		it2++;
+	}
+	return new Polynome(set,variable);
+}
+
 Polynome::~Polynome()
 {
 }

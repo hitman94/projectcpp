@@ -16,6 +16,11 @@ string Produit::whoAmI() {
 Expression * const Produit::clone() {
 	return new Produit(e1->clone(), e2->clone());
 }
+
+Expression * Produit::simplifier() {
+	return this;
+}
+
 Produit::~Produit()
 {
 }

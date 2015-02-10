@@ -12,6 +12,7 @@ public:
 	virtual string const affiche();
 	virtual Expression * const clone();
 	virtual Expression * derive(string var);
+	Polynome * const operator+(const Polynome &polynom);
 	~Polynome();
 
 private:

@@ -33,16 +33,22 @@ void testDerivation() {
 
 void testPolynome() {
 	std::set<std::pair<double, double>> set;
-	set.insert(std::pair<double, double>(0, 0));
+
 	set.insert(std::pair<double, double>(1, 1));
+	set.insert(std::pair<double, double>(0, 0));
+	
 	set.insert(std::pair<double, double>(2, 4));
 	Variable * var = new Variable("x",3);
-	Expression * poly = new Polynome(set, var);
+	Polynome * poly = new Polynome(set, var);
 
 	cout << *poly << "\n";
 	cout << "valeur pour x =" << var->eval() << " : " << poly->eval()<< "\n";
 
-	cout << "polynome derive:" <<  *poly->derive("x") << "\n";
+	cout << "\npool size:" << Expression::_pool.size() << "\n";
+
+	//cout << "polynome derive:" <<  *poly->derive("x") << "\n";
+
+	//cout << "polynome addition:" << *(*poly + *poly) << "\n";
 
 }
 
@@ -491,10 +497,8 @@ int main(int argc, char** argv) {
 			cout << "cas inconnu!" << endl;
 			break;
 		}
-		cout << "\npool size:" << Expression::_pool.size() << "\n";
 	} while (choix != 666);
 
 	Expression::toutLiberer();
-	return 0;
 	system("PAUSE");
 }
