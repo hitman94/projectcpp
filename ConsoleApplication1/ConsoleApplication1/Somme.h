@@ -10,6 +10,7 @@ public:
 	virtual double const eval();
 	virtual Expression * derive(string var);
 	virtual Expression * const clone();
+	virtual Expression * simplifier();
 	~Somme();
 
 protected : 
