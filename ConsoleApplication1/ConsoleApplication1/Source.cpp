@@ -32,12 +32,12 @@ void testDerivation() {
 }
 
 void testPolynome() {
-	std::set<std::pair<double, double>> set;
+	std::set<std::pair<double, double>> * set = new std::set< std::pair<double, double> > ;
 
-	set.insert(std::pair<double, double>(1, 1));
-	set.insert(std::pair<double, double>(0, 0));
+	set->insert(std::pair<double, double>(1, 1));
+	set->insert(std::pair<double, double>(0, 0));
 	
-	set.insert(std::pair<double, double>(2, 4));
+	set->insert(std::pair<double, double>(2, 4));
 	Variable * var = new Variable("x",3);
 	Polynome * poly = new Polynome(set, var);
 
