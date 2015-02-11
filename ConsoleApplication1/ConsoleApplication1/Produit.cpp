@@ -30,8 +30,8 @@ Expression * Produit::simplifier(){
 	this->simplifierOperande();
 	if (e1->getType() == Type::variable && e2->getType() == Type::variable){
 		if (e1 == e2){
-			std::set<std::pair<double, double>> set;
-			set.insert(std::pair<double, double>(1, 2));
+			std::set<std::pair<double, double>> * set = new std::set < std::pair<double, double> >;
+			set->insert(std::pair<double, double>(1, 2));
 			Expression * poly = new Polynome(set, dynamic_cast<Variable *>(e1));
 			return poly;
 		}
