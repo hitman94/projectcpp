@@ -20,13 +20,11 @@ Expression * const Produit::clone() {
 	return new Produit(e1->clone(), e2->clone());
 }
 
-Expression * Produit::simplifier() {
-	return this;
-}
 
 Produit::~Produit()
 {
 }
+
 
 Expression * Produit::simplifier(){
 	this->simplifierOperande();
@@ -38,14 +36,14 @@ Expression * Produit::simplifier(){
 			return poly;
 		}
 	}
-	else if (e1->getType() == Type::constant || e1->getType() == Type::variable){
+	else if (e1->getType() == Type::constant){
 		if (e1->eval() == 0){
 			return new Constante(0.0);
 		}else if (e1->eval() == 1){
 			return e2;
 		}
 	}
-	else if (e2->getType() == Type::constant || e2->getType() == Type::variable){
+	else if (e2->getType() == Type::constant){
 		if (e2->eval() == 0){
 			return new Constante(0.0);
 		}

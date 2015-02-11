@@ -53,13 +53,14 @@ void testPolynome() {
 }
 
 void testSimplifier(){
+	Expression * var = new Variable("x", 4);
 	Expression * exp = new Produit(new Constante(1.0),
 		new Somme(
-			new Produit(new Constante(1.0), new Variable("x", 4)),
-			new Produit(new Variable("x", 4), new Constante(1.0))));
-	cout << exp << endl;
+		new Produit(new Constante(1.0), var),
+		new Produit(var, new Constante(1.0))));
+	cout <<* exp << endl;
 	exp = exp->simplifier();
-	cout << exp << endl;
+	cout <<* exp << endl;
 
 }
 
@@ -442,6 +443,7 @@ int main(int argc, char** argv) {
 		cout << " 10 : boucles imbriques" << endl;
 		cout << " 11 : tous les tests" << endl;
 		cout << " 12 : polynomes" << endl;
+		cout << " 13 : simplifier" << endl;
 		cout << " 666 : quitter" << endl;
 		cout << "choix : ";
 		cin >> choix;
