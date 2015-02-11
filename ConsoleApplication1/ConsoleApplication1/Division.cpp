@@ -29,18 +29,13 @@ Division::~Division()
 
 Expression * Division::simplifier(){
 	this->simplifierOperande();
-
-
 	if (e1->getType() == Type::variable && e2->getType() == Type::variable){
 		if (e1 == e2)
 			return new Constante(1.0);
 	}
-	else if (e1->getType() == Type::variable && e2->getType() == Type::variable){
-		if (e1 == e2)
+	else if (e1->getType() == Type::constant && e2->getType() == Type::constant){
+		if (e1->eval() == e2->eval())
 			return new Constante(1.0);
-	}
-	else if (e2->getType() == Type::constant && e2->eval() == 0){
-		return e1;
 	}
 	return this;
 }
