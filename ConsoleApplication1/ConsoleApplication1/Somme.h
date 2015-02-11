@@ -12,7 +12,6 @@ public:
 	virtual Expression * const clone();
 	virtual Expression * simplifier();
 	~Somme();
-
 protected : 
 	virtual string whoAmI();
 

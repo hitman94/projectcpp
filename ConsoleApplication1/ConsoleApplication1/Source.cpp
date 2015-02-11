@@ -46,6 +46,17 @@ void testPolynome() {
 
 }
 
+void testSimplifier(){
+	Expression * exp = new Produit(new Constante(1.0),
+		new Somme(
+			new Produit(new Constante(1.0), new Variable("x", 4)),
+			new Produit(new Variable("x", 4), new Constante(1.0))));
+	cout << exp << endl;
+	exp = exp->simplifier();
+	cout << exp << endl;
+
+}
+
 void testVariable1()
 {
 	// x = 3
@@ -484,6 +495,9 @@ int main(int argc, char** argv) {
 			break;
 		case 12:
 			testPolynome();
+			break;
+		case 13:
+			testSimplifier();
 			break;
 		default:
 			cout << "cas inconnu!" << endl;

@@ -13,7 +13,6 @@ class Expression
 
 public:
 	Expression();
-
 	virtual const double eval()=0;
 	virtual string const affiche() = 0;
 	virtual Expression * const clone();

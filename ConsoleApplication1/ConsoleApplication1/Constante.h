@@ -14,6 +14,6 @@ public:
 	virtual Expression * const clone();
 	~Constante();
 private:
-	double value;
+	double const value;
 };
 #endif
