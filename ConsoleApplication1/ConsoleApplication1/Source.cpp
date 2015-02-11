@@ -33,16 +33,22 @@ void testDerivation() {
 
 void testPolynome() {
 	std::set<std::pair<double, double>> set;
-	set.insert(std::pair<double, double>(0, 0));
+
 	set.insert(std::pair<double, double>(1, 1));
+	set.insert(std::pair<double, double>(0, 0));
+	
 	set.insert(std::pair<double, double>(2, 4));
 	Variable * var = new Variable("x",3);
-	Expression * poly = new Polynome(set, var);
+	Polynome * poly = new Polynome(set, var);
 
 	cout << *poly << "\n";
 	cout << "valeur pour x =" << var->eval() << " : " << poly->eval()<< "\n";
 
-	cout << "polynome derive:" <<  *poly->derive("x") << "\n";
+	cout << "\npool size:" << Expression::_pool.size() << "\n";
+
+	//cout << "polynome derive:" <<  *poly->derive("x") << "\n";
+
+	//cout << "polynome addition:" << *(*poly + *poly) << "\n";
 
 }
 
@@ -66,16 +72,18 @@ void testVariable1()
 	cout << x << " = " << x.eval() << endl;
 	cout << y << " = " << y.eval() << endl;
 
-	// exp = 1 + 2 * x
-	Expression * exp = new Somme(new Constante(1.0), new Produit(new Constante(2.0), &x));
-	// a = (y <- exp)
-	Affectation * a = new Affectation(new Variable("y"), exp->clone());
-	cout << *a << " = " << a->eval() << endl;
-	cout << y << " = " << y.eval() << endl;
 
+	//IL FAUT FAIRE UN NEW POUR LE X
+	// exp = 1 + 2 * x
+	//Expression * exp = new Somme(new Constante(1.0), new Produit(new Constante(2.0), &x));
+	// a = (y <- exp)
+	//Affectation * a = new Affectation(new Variable("y"), exp->clone());
+	//cout << *a << " = " << a->eval() << endl;
+	cout << y << " = " << y.eval() << endl;
+	
 	Variable::effacerMemoire();
-	delete exp; // OK car il existe un clone
-	delete a;
+	//delete exp; // OK car il existe un clone
+	//delete a;
 	cout << "destruction automatique des variables locales allouees sur la PILE: ICI X et Y" << endl;
 }
 
@@ -506,6 +514,5 @@ int main(int argc, char** argv) {
 	} while (choix != 666);
 
 	Expression::toutLiberer();
-	return 0;
 	system("PAUSE");
 }

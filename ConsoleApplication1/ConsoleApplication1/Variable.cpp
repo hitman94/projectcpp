@@ -40,4 +40,5 @@ Type Variable::getType(){
 
 Variable::~Variable()
 {
+	//Variable::varMap.erase(this->name);
 }

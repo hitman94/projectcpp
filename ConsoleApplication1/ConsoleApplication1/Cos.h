@@ -1,10 +1,10 @@
 #ifndef COS
 #define COS
-#include "Expression.h"
+#include "UnaireOp.h"
 #include "Constante.h"
 using namespace std;
 class Cos :
-	public Expression
+	public UnaireOp
 {
 public:
 	Cos(Expression * c);
@@ -14,7 +14,5 @@ public:
 	virtual Expression * simplifier();
 	virtual Expression * const clone();
 	~Cos();
-private:
-	Expression * expr;
 };
 #endif

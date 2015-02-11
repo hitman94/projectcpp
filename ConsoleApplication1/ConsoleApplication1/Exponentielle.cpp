@@ -2,7 +2,7 @@
 #include "Produit.h"
 #include <math.h>
 
-Exponentielle::Exponentielle(Expression *  c) : expr(c)
+Exponentielle::Exponentielle(Expression *  c) : UnaireOp(c)
 {
 }
 

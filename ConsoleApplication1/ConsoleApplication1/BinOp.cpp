@@ -9,6 +9,9 @@ string const BinOp::affiche() {
 
 BinOp::~BinOp()
 {
+	cout << "\nSuppresion binOp\n";
+	delete e1;
+	delete e2;
 }
 
 void BinOp::simplifierOperande(){

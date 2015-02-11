@@ -5,7 +5,6 @@ set<Expression *> Expression::_pool;
 Expression::Expression()
 {
 	Expression::_pool.insert(this);
-	cout << "prout" << endl;
 }
 
 ostream& operator<< (ostream &out, Expression &e) {
@@ -13,11 +12,11 @@ ostream& operator<< (ostream &out, Expression &e) {
 }
 
 void Expression::toutLiberer() {
-	set<Expression *>::iterator it;
-
-	for (it = Expression::_pool.begin(); it != Expression::_pool.end(); ) {
-		delete *it;
-		Expression::_pool.erase(it++);
+	std::set<Expression *>::iterator it = Expression::_pool.begin();
+	while (it != Expression::_pool.end()) {
+		Expression * suppression = *it;
+		it++;
+		delete suppression;
 	}
 }
 
@@ -35,6 +34,7 @@ Expression * Expression::simplifier(){
 
 Expression::~Expression()
 {
+	Expression::_pool.erase(this);
 }
 
 Type Expression::getType(){

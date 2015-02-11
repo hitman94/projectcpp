@@ -22,7 +22,6 @@ public:
 	static void toutLiberer();
 	virtual ~Expression();
 	friend ostream& operator<< (ostream &out, Expression &e);
-private:
 	static set<Expression *> _pool;
 	
 };

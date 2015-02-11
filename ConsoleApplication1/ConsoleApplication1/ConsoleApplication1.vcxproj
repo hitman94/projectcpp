@@ -100,6 +100,7 @@
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="Superieur.cpp" />
     <ClCompile Include="SuperieurEgal.cpp" />
+    <ClCompile Include="UnaireOp.cpp" />
     <ClCompile Include="Variable.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -125,6 +126,7 @@
     <ClInclude Include="Superieur.h" />
     <ClInclude Include="SuperieurEgal.h" />
     <ClInclude Include="TypeEnum.h" />
+    <ClInclude Include="UnaireOp.h" />
     <ClInclude Include="Variable.h" />
   </ItemGroup>
   <ItemGroup>
