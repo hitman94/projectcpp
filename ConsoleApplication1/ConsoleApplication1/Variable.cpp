@@ -29,6 +29,7 @@ Expression * Variable::derive(string var) {
 }
 
 void Variable::effacerMemoire() {
+
 	Variable::varMap.clear();
 }
 
@@ -40,5 +41,5 @@ Type Variable::getType(){
 
 Variable::~Variable()
 {
-	//Variable::varMap.erase(this->name);
+	Variable::varMap.erase(this->name);
 }

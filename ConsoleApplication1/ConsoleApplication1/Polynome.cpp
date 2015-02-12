@@ -122,6 +122,106 @@ Polynome * const Polynome::operator-(const Polynome &polynom) {
 	return new Polynome(set, variable);
 }
 
+void Polynome::setCoeff(set<std::pair<double, double>> * set) {
+	delete coeff;
+	coeff = set;
+}
+
+Polynome * const Polynome::operator+=(const Polynome &polynom) {
+	std::set<std::pair<double, double>> * set = new std::set < std::pair<double, double> >;
+	std::set<std::pair<double, double>>::iterator it1 = coeff->begin();
+	std::set<std::pair<double, double>>::iterator it2 = polynom.coeff->begin();
+	while (it1 != coeff->end() && it2 != polynom.coeff->end()) {
+		if (it1->first < it2->first) {
+			set->insert(*it1);
+			it1++;
+		}
+		else if (it1->first > it2->first) {
+			set->insert(*it2);
+			it2++;
+		}
+		else {
+			set->insert(std::pair<double, double>(it1->first, it1->second + it2->second));
+			it1++;
+			it2++;
+		}
+	}
+	while (it1 != coeff->end()) {
+		set->insert(*it1);
+		it1++;
+	}
+	while (it2 != polynom.coeff->end()) {
+		set->insert(*it2);
+		it2++;
+	}
+	this->setCoeff(set);
+	return this;
+}
+
+Polynome * const Polynome::operator-=(const Polynome &polynom) {
+	std::set<std::pair<double, double>> * set = new std::set < std::pair<double, double> >;
+	std::set<std::pair<double, double>>::iterator it1 = coeff->begin();
+	std::set<std::pair<double, double>>::iterator it2 = polynom.coeff->begin();
+	while (it1 != coeff->end() && it2 != polynom.coeff->end()) {
+		if (it1->first < it2->first) {
+			set->insert(*it1);
+			it1++;
+		}
+		else if (it1->first > it2->first) {
+			set->insert(std::pair<double, double>(it2->first, -1*it2->second));
+			it2++;
+		}
+		else {
+			set->insert(std::pair<double, double>(it1->first, it1->second - it2->second));
+			it1++;
+			it2++;
+		}
+	}
+	while (it1 != coeff->end()) {
+		set->insert(*it1);
+		it1++;
+	}
+	while (it2 != polynom.coeff->end()) {
+		set->insert(std::pair<double, double>(it2->first, -1 * it2->second));
+		it2++;
+	}
+	this->setCoeff(set);
+	return this;
+}
+
+Polynome * const Polynome::operator*=(const Polynome &polynom) {
+	std::set<std::pair<double, double>> * set = new std::set < std::pair<double, double> >;
+	std::set<std::pair<double, double>>::iterator it1 = coeff->begin();
+	while (it1 != coeff->end()) {
+		std::set<std::pair<double, double>>::iterator it2 = polynom.coeff->begin();
+		while (it2 != polynom.coeff->end()) {
+			set->insert(std::pair<double, double>(it1->first*it2->first, it1->second*it2->second));
+			it2++;
+		}
+		it1++;
+	}
+	this->setCoeff(set);
+	return this;
+}
+
+bool const Polynome::operator==(const Polynome &polynom) {
+	if (this->coeff->size() != polynom.coeff->size())
+		return false;
+	std::set<std::pair<double, double>>::iterator it1 = coeff->begin();
+	std::set<std::pair<double, double>>::iterator it2 = polynom.coeff->begin();
+	while (it1 != coeff->end()) {
+		if ((it1->first != it2->first) || (it1->second != it2->second))
+			return false;
+		it1++;
+		it2++;
+	}
+	return true;
+}
+
+bool const Polynome::operator!=(const Polynome &polynom) {
+	return !this->operator==(polynom);
+}
+
 Polynome * const Polynome::operator*(const Polynome &polynom) {
 	std::set<std::pair<double, double>> * set = new std::set < std::pair<double, double> >;
 	std::set<std::pair<double, double>>::iterator it1 = coeff->begin();

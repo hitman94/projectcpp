@@ -44,12 +44,15 @@ void testPolynome() {
 	cout << *poly << "\n";
 	cout << "valeur pour x =" << var->eval() << " : " << poly->eval()<< "\n";
 
-	cout << "\npool size:" << Expression::_pool.size() << "\n";
 
-	//cout << "polynome derive:" <<  *poly->derive("x") << "\n";
+	cout << "polynome derive:" <<  *poly->derive("x") << "\n";
 
-	//cout << "polynome addition:" << *(*poly + *poly) << "\n";
+	cout << "polynome addition:" << *(*poly + *poly) << "\n";
 
+	*poly += *poly;
+	cout << "Apres operator+=:" << *poly << "\n";
+
+	cout << "Apres operator==:" << (*poly == *poly) << "\n";
 }
 
 void testSimplifier(){
